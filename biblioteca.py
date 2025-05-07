@@ -35,10 +35,15 @@ class Pessoa():
             print("Vou dormir.")
             self.estado = "Dormindo"
 
+    def pararComer(self):
+        self.estado = "Acordado"
+        print("Acabei de comer")
 
     def acordar(self):
         if self.estado == "Acordado":
             print("Já estou acordado.")
+        elif self.estado == "Comendo":
+            print("Você já está acordado, e está comendo")
         else:
             print("Acordei painho")
             self.estado = "Acordado"
